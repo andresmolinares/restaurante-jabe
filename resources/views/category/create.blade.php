@@ -1,0 +1,11 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+
+<form action="{{ route('category.index') }}" method="post" enctype="multipart/form-data">
+@csrf
+@include('category.form',['modo'=>'Crear'])
+</form>
+</div>
+@endsection
